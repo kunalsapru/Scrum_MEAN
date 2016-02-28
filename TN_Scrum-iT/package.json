@@ -1,0 +1,16 @@
+{
+  "name": "TN_SCRUM-IT",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "fs": "*",
+    "method-override": "*",
+    "mongoose": "*",
+    "mongoose-q": "^0.1.0",
+    "q-bluebird": "0.0.1"
+  },
+  "devDependencies": {
+    "bluebird": "^3.2.2"
+  }
+}

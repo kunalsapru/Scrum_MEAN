@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+
+	<title>SCRUM-iT</title>
+
+     <!-- CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/angular-xeditable/dist/css/xeditable.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/dashboard.css"> <!-- custom styles -->
+
+	<!-- JS -->
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src= "libs/angular-xeditable/dist/js/xeditable.min.js"></script>
+    <script src="libs/bootstrap/js/modal.js"></script>
+    <script src="libs/bootstrap/js/dropdown.js"></script>
+     
+	<!-- Angular Controllers -->
+    <script src="js/controllers/BacklogControllerModule.js"></script>
+	<script src="js/controllers/DashboardControllerModule.js"></script>
+	<script src="js/controllers/MasterTablesControllerModule.js"></script>
+    <script src="js/controllers/PriorityControllerModule.js"></script>
+    <script src="js/controllers/ProjectControllerModule.js"></script>
+    <script src="js/controllers/RoleControllerModule.js"></script>
+	<script src="js/controllers/SprintBoardControllerModule.js"></script>
+    <script src="js/controllers/StatusControllerModule.js"></script>
+    <script src="js/controllers/UserControllerModule.js"></script>
+    <script src="js/controllers/UserStoryTypeControllerModule.js"></script>
+    
+	<!-- Angular Services -->
+	<script src="js/services/BacklogServiceModule.js"></script>
+    <script src="js/services/MasterTablesServiceModule.js"></script>
+    <script src="js/services/PriorityServiceModule.js"></script>
+    <script src="js/services/ProjectServiceModule.js"></script>
+    <script src="js/services/RoleServiceModule.js"></script>
+	<script src="js/services/SprintBoardServiceModule.js"></script>
+    <script src="js/services/StatusServiceModule.js"></script>
+    <script src="js/services/UserServiceModule.js"></script>
+    <script src="js/services/UserStoryTypeServiceModule.js"></script>
+   
+    
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="scrumit">
+<div class="container">
+	
+        <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"><strong>Scrum-iT</strong></a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a ui-sref="userProfile"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a ui-sref="settings"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a ui-sref="login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+          </li>
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li><a ui-sref="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+                                    <li><a ui-sref="backlog"><i class="fa fa-file-text fa-fw"></i> Backlog</a></li>
+                                    <li><a ui-sref="sprintBoard"><i class="fa fa-table fa-fw"></i> Sprint Board</a></li>
+                                    <li><a ui-sref="chat"><i class="fa fa-weixin fa-fw"></i> Chat</a></li>
+                                    <li><a ui-sref="chart"><i class="fa fa-area-chart fa-fw"></i> Burn Down Charts</a></li>
+                                    <li><a ui-sref="masterTables"><i class="fa fa-user-plus fa-fw"></i> Master Table</a></li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                    <div ui-view></div>
+            </div>
+    </div>
+</div>
+</body>
+</html>

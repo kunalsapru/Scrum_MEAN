@@ -1,0 +1,17 @@
+<h1 class="page-header">User Profile</h1>
+<div class="col-md-4">
+<img src="../images/userDefaultImage.jpg" class="pull-xs-left img-circle col-md-10">
+</div>
+<div class="col-md-8">
+    <form class="form-signin" method="get">       
+      <h2 class="form-signin-heading">Edit Profile</h2>
+      <input type="text" class="form-control" ng-model="userName" placeholder="User Name"/><br/>
+      <input type="text" class="form-control" ng-model="firstName" placeholder="First Name"/><br/>
+      <input type="text" class="form-control" ng-model="lastName" placeholder="Last Name"/><br/>
+      <input type="email" class="form-control" ng-model="emailAddress" placeholder="Email Address"/><br/>
+      <input type="password" class="form-control" ng-model="password" placeholder="Password"/><br/>  
+      <input type="password" class="form-control" ng-model="confirmPassword" placeholder="Confirm Password" required=""/><br/> 
+      <button class="btn btn-lg btn-primary btn-block" ng-click="editUser()" type="submit"><span class="glyphicon glyphicon-log-in"></span> Edit User</button> 
+    </form>
+</div>
+
